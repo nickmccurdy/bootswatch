@@ -6192,3 +6192,9 @@ input.form-control:disabled,
 textarea.form-control:disabled {
   border-style: dashed;
 }
+textarea.form-control {
+  resize: none;
+}
+textarea.form-control:focus {
+  resize: both;
+}
