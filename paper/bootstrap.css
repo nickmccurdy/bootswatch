@@ -6198,6 +6198,9 @@ textarea.form-control {
 textarea.form-control:focus {
   resize: both;
 }
+.progress {
+  height: 4px;
+}
 .progress,
 .progress-bar {
   box-shadow: none;
