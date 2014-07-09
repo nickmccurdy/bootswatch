@@ -26,7 +26,10 @@
 // Buttons ====================================================================
 
 .active-button-background(@background) {
-  &:hover,
+  &:hover {
+    background-color: @background;
+  }
+
   &:focus,
   &:active,
   &.active,
