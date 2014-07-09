@@ -52,12 +52,24 @@ textarea.form-control {
 
 // Progress bars ==============================================================
 
+// Based off of .striped() from Bootstrap's /less/mixins/gradients.less
+.striped-vertical(@color: rgba(255,255,255,.15)) {
+  background-image: -webkit-linear-gradient(90deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(90deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+  background-image: linear-gradient(90deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+}
+
 .progress {
   height: 4px;
 }
 
 .progress, .progress-bar {
   box-shadow: none;
+}
+
+.progress-striped .progress-bar,
+.progress-bar-striped {
+  .striped-vertical(rgba(255,255,255,.15));
 }
 
 // Containers =================================================================
