@@ -16,6 +16,16 @@
 
 // Buttons ====================================================================
 
+.active-button-background(@background) {
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-color: darken(@background, 2.5%);
+  }
+}
+
 .btn {
   .raise-low();
   border-radius: 3px;
@@ -24,6 +34,25 @@
   &:active, &.active {
     .raise-high();
   }
+}
+
+.btn-default {
+  .active-button-background(@btn-default-bg);
+}
+.btn-primary {
+  .active-button-background(@btn-primary-bg);
+}
+.btn-success {
+  .active-button-background(@btn-success-bg);
+}
+.btn-info {
+  .active-button-background(@btn-info-bg);
+}
+.btn-warning {
+  .active-button-background(@btn-warning-bg);
+}
+.btn-danger {
+  .active-button-background(@btn-danger-bg);
 }
 
 // Typography =================================================================
