@@ -4,13 +4,26 @@
 
 @import url("//fonts.googleapis.com/css?family=RobotoDraft:400italic,700italic,400,700");
 
+.raise-low() {
+  box-shadow: rgba(0, 0, 0, 0.258824) 0 2px 5px 0;
+}
+
+.raise-high() {
+  box-shadow: rgba(0, 0, 0, 0.2) 0 8px 17px 0;
+}
+
 // Navbar =====================================================================
 
 // Buttons ====================================================================
 
 .btn {
+  .raise-low();
   border-radius: 3px;
   border: none;
+
+  &:active, &.active {
+    .raise-high();
+  }
 }
 
 // Typography =================================================================
